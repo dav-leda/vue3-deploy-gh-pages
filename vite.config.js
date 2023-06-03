@@ -9,17 +9,11 @@ export default defineConfig( ({ mode }) => {
   let dev = mode === 'development'
 
   return {
+
     base: dev ? '/' : '/vue3-deploy-gh-pages/',
 
-    build:{
-      sourcemap: false,
-      minify: 'terser',
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true
-        }
-      }
+    esbuild: {
+      drop: ['console', 'debugger'],
     },
 
     plugins: [vue()],
