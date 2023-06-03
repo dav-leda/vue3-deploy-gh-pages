@@ -1,6 +1,14 @@
 <script setup>
+
+import { onMounted } from 'vue'
+
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+
+onMounted(() => {
+  console.log('hola')
+})
+
 </script>
 
 <template>

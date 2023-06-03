@@ -1,9 +1,6 @@
 <script setup>
 defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
+  msg: String
 })
 </script>
 
